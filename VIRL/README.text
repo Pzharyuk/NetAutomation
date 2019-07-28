@@ -1,0 +1,5 @@
+ansible-test.virl
+=================
+
+- This topology requires at a minimum 24 GigaBytes of RAM
+- This topology works well to test against various Cisco platforms using Ansible 
