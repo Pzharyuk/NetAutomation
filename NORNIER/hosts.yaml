@@ -1,0 +1,24 @@
+---
+r1:
+    site: edge
+    groups:
+      - routers
+    nornir_host: 172.16.1.130
+
+r2:
+    site: edge
+    groups:
+      - routers
+    nornir_host: 172.16.1.131
+
+sw1:
+    site: access
+    groups:
+      - routers
+    nornir_host: 172.16.1.132
+
+sw2:
+    site: access
+    groups:
+      - routers
+    nornir_host: 172.16.1.133

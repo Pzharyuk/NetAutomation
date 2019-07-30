@@ -1,0 +1,3 @@
+export VIRL_HOST=http://10.43.120.167
+export VIRL_USERNAME=guest
+export VIRL_PASSWORD=guest
