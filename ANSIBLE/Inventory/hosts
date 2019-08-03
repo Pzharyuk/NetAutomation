@@ -1,0 +1,15 @@
+[Routers]
+R1 ansible_host=172.16.1.130
+R2 ansible_host=172.16.1.131
+
+[Switches]
+SW1 ansible_host=172.16.1.132
+SW2 ansible_host=172.16.1.133
+
+[Routers:vars]
+ansible_user=cisco
+ansible_ssh_pass=cisco
+
+[Switches:vars]
+ansible_user=cisco
+ansible_ssh_pass=cisco

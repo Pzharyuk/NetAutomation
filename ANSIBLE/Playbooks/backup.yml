@@ -1,0 +1,25 @@
+---
+  - name: Back up configs to folder
+    hosts: all
+    gather_facts: no
+
+    tasks:
+
+    - name: show running-config (IOS)
+      when: ansible_network_os == 'ios'
+      ios_command:
+        commands: show running-config
+      register: config
+
+    - name: ensure device folder is created
+      file:
+        path: "../Backup/{{ inventory_hostname }}"
+        state: directory
+
+    - name: get timestamp
+      command: date +%Y%m%d
+      register: timestamp
+
+    - copy:
+        content: "{{ config.stdout[0] }}"
+        dest: "../Backup/{{ inventory_hostname }}/running-config_{{ timestamp.stdout }}.cfg"
