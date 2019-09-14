@@ -1,15 +1,18 @@
 [Routers]
-R1 ansible_host=172.16.1.130
-R2 ansible_host=172.16.1.131
+RTR1 ansible_host=172.16.1.20
+RTR2 ansible_host=172.16.1.21
 
 [Switches]
-SW1 ansible_host=172.16.1.132
-SW2 ansible_host=172.16.1.133
+SW1 ansible_host=172.16.1.30
+SW2 ansible_host=172.16.1.31
 
-[Routers:vars]
-ansible_user=cisco
-ansible_ssh_pass=cisco
+[Nexus]
+SW-NX1 ansible_host=172.16.1.40
+SW-NX1 ansible_host=172.16.1.41
 
-[Switches:vars]
-ansible_user=cisco
-ansible_ssh_pass=cisco
+[Vpctest]
+SW-VPN-TEST ansible_host=172.16.1.42
+
+[all:vars]
+ansible_user=admin
+ansible_ssh_pass=admin
