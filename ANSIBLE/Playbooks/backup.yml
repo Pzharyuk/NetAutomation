@@ -1,6 +1,6 @@
 ---
   - name: Back up configs to folder
-    hosts: Routers
+    hosts: Switches
     gather_facts: no
 
     tasks:
