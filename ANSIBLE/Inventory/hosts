@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [layer3]
 RTR1 ansible_host=172.16.1.105
 RTR2 ansible_host=172.16.1.106
@@ -21,3 +22,23 @@ ansible_ssh_pass=admin
 [nexus:vars]
 ansible_user=admin
 ansible_ssh_pass=admin
+=======
+[Routers]
+RTR1 ansible_host=172.16.1.20
+RTR2 ansible_host=172.16.1.21
+
+[Switches]
+SW1 ansible_host=172.16.1.30
+SW2 ansible_host=172.16.1.31
+
+[Nexus]
+SW-NX1 ansible_host=172.16.1.40
+SW-NX1 ansible_host=172.16.1.41
+
+[Vpctest]
+SW-VPN-TEST ansible_host=172.16.1.42
+
+[all:vars]
+ansible_user=admin
+ansible_ssh_pass=admin
+>>>>>>> 28319a343d4497df1ebe145f1a82fc281a958064
