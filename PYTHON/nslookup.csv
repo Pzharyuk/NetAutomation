@@ -1,0 +1,3 @@
+b"** server can't find 253.120.43.10.in-addr.arpa: NXDOMAIN\n\n"
+b"** server can't find 101.120.34.10.in-addr.arpa: NXDOMAIN\n\n"
+b'8.8.8.8.in-addr.arpa\tname = dns.google.\n\nAuthoritative answers can be found from:\n\n'

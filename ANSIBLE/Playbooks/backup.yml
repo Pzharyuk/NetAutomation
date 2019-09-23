@@ -1,6 +1,6 @@
 ---
   - name: Back up configs to folder
-    hosts: all
+    hosts: layer2
     gather_facts: no
 
     tasks:
@@ -13,7 +13,7 @@
 
     - name: ensure device folder is created
       file:
-        path: "../Backup/{{ inventory_hostname }}"
+        path: "/home/pzharyuk/DEVNET/REPOS/NetAutomation/ANSIBLE/Backup/{{ inventory_hostname }}"
         state: directory
 
     - name: get timestamp
@@ -22,4 +22,4 @@
 
     - copy:
         content: "{{ config.stdout[0] }}"
-        dest: "../Backup/{{ inventory_hostname }}/running-config_{{ timestamp.stdout }}.cfg"
+        dest: "/home/pzharyuk/DEVNET/REPOS/NetAutomation/ANSIBLE/Backup/{{ inventory_hostname }}/running-config_{{ timestamp.stdout }}.cfg"
