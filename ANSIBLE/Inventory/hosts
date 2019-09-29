@@ -8,7 +8,7 @@ SW2 ansible_host=172.16.1.31
 
 [Nexus]
 SW-NX1 ansible_host=172.16.1.40
-SW-NX1 ansible_host=172.16.1.41
+SW-NX2 ansible_host=172.16.1.41
 
 [Vpctest]
 SW-VPN-TEST ansible_host=172.16.1.42
@@ -16,3 +16,5 @@ SW-VPN-TEST ansible_host=172.16.1.42
 [all:vars]
 ansible_user=admin
 ansible_ssh_pass=admin
+ansible_connection=network_cli
+ansible_network_os=ios
