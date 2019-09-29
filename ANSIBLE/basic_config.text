@@ -1,0 +1,29 @@
+hostname SW-NX1
+ip domain-name local.test
+crypto key generate rsa modulus 2048
+username admin privilege 15 secret admin
+
+line vty 0 4
+login local 
+transport input ssh
+
+
+interface GigabitEthernet6
+ ip address 172.16.1.106 255.255.255.0
+ negotiation auto
+
+ip route 0.0.0.0 0.0.0.0 172.16.1.1
+
+NEXUS:
+
+hostname SW-NX2
+
+interface mgmt0
+  vrf member management
+  ip address 172.16.1.102/24
+
+ssh key rsa 2048
+
+ip route 0.0.0.0 0.0.0.0 mgmt 0 172.16.1.1
+
+username admin role priv-15 password admin

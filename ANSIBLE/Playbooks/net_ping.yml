@@ -1,0 +1,14 @@
+---
+  - name: Ping a range of IP's
+    hosts: localhost
+    gather_facts: no
+
+    tasks:
+
+    -  name: Print a subnet
+       ping:
+         data: 10.43.120.180
+       register: ip_out
+
+    -  debug: var=ip_out
+    

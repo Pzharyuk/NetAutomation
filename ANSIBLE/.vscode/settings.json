@@ -1,3 +1,7 @@
 {
+<<<<<<< HEAD
     "python.pythonPath": "/Users/pzharyuk/OneDrive/Documents/Coding/Repos/NetAutomation/ANSIBLE/ansible_env/bin/python3"
+=======
+    "python.pythonPath": "/home/pzharyuk/DEVNET/REPOS/NetAutomation/PYTHON/py_env/bin/python3"
+>>>>>>> 114c5ead95a47ca29db87acb010f4404ad0884e9
 }

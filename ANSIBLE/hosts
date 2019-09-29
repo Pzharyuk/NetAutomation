@@ -1,15 +1,23 @@
-[Routers]
-R1 ansible_host=172.16.1.130
-R2 ansible_host=172.16.1.131
+[layer3]
+RTR1 ansible_host=172.16.1.105
+RTR2 ansible_host=172.16.1.106
 
-[Switches]
-SW1 ansible_host=172.16.1.132
-SW2 ansible_host=172.16.1.133
+[layer2]
+SW1 ansible_host=172.16.1.110
+SW2 ansible_host=172.16.1.111
 
-[Routers:vars]
-ansible_user=cisco
-ansible_ssh_pass=cisco
+[nexus]
+SW1 ansible_host=172.16.1.101
+SW2 ansible_host=172.16.1.102
 
-[Switches:vars]
-ansible_user=cisco
-ansible_ssh_pass=cisco
+[layer3:vars]
+ansible_user=admin
+ansible_ssh_pass=admin
+
+[layer2:vars]
+ansible_user=admin
+ansible_ssh_pass=admin
+
+[nexus:vars]
+ansible_user=admin
+ansible_ssh_pass=admin

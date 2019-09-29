@@ -1,6 +1,14 @@
 ---
   - name: Back up configs to folder
+<<<<<<< HEAD
     hosts: Vpctest
+=======
+<<<<<<< HEAD
+    hosts: layer2
+=======
+    hosts: Routers
+>>>>>>> 28319a343d4497df1ebe145f1a82fc281a958064
+>>>>>>> 114c5ead95a47ca29db87acb010f4404ad0884e9
     gather_facts: no
 
     tasks:
@@ -13,7 +21,11 @@
 
     - name: ensure device folder is created
       file:
+<<<<<<< HEAD
+        path: "/home/pzharyuk/DEVNET/REPOS/NetAutomation/ANSIBLE/Backup/{{ inventory_hostname }}"
+=======
         path: "/Users/pzharyuk/OneDrive/Documents/Coding/Repos/NetAutomation/ANSIBLE/Backup/{{ inventory_hostname }}"
+>>>>>>> 28319a343d4497df1ebe145f1a82fc281a958064
         state: directory
 
     - name: get timestamp
@@ -22,4 +34,12 @@
 
     - copy:
         content: "{{ config.stdout[0] }}"
+<<<<<<< HEAD
         dest: "/Users/pzharyuk/OneDrive/Documents/Coding/Repos/NetAutomation/ANSIBLE/Backup/{{ inventory_hostname }}/running-config_{{ timestamp.stdout }}.cfg"
+=======
+<<<<<<< HEAD
+        dest: "/home/pzharyuk/DEVNET/REPOS/NetAutomation/ANSIBLE/Backup/{{ inventory_hostname }}/running-config_{{ timestamp.stdout }}.cfg"
+=======
+        dest: "/Users/pzharyuk/OneDrive/Documents/Coding/Repos/NetAutomation/ANSIBLE/Backup/{{ inventory_hostname }}/running-config_{{ timestamp.stdout }}.cfg"
+>>>>>>> 28319a343d4497df1ebe145f1a82fc281a958064
+>>>>>>> 114c5ead95a47ca29db87acb010f4404ad0884e9
